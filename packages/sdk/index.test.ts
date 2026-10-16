@@ -139,7 +139,7 @@ async function runHook(
   res.emit('finish');
   // reportSettlement is deliberately not awaited by the middleware.
   await vi.waitFor(() => expect(next).toHaveBeenCalledOnce());
-  await new Promise((resolve) => setTimeout(resolve, 10));
+  await new Promise((resolve) => setTimeout(resolve, 50));
   return next;
 }
 
